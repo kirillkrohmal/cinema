@@ -8,13 +8,15 @@
 
 
 <form action="<%=request.getContextPath()%>/view" method="get">
-        <td>Rows</td>
-        <td>Columns</td>
-        <%--@elvariable id="halls" type="java.util.List"--%>
-        <c:forEach items="${halls}" var="hall">
-            <c:out value="${hall.rows}"/>
-            <c:out value="${hall.columns}"/>
-        </c:forEach>
+    <td>Rows</td>
+    <c:forEach items="${halls}" var="hall">
+        <c:out value="${hall.rows}"/>
+    </c:forEach>
+    <td>Columns</td>
+    <%--@elvariable id="halls" type="java.util.List"--%>
+    <c:forEach items="${halls}" var="hall">
+        <c:out value="${hall.columns}"/>
+    </c:forEach>
 
     <ul>
         <li><a href="<%=request.getContextPath()%>/add">Add new Columns and Rows</a></li>
