@@ -15,6 +15,7 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher dispatcher = req.getRequestDispatcher("/add.jsp");
+        req.setAttribute("list", UserStorage.getInstance().getUserList());
         dispatcher.forward(req, resp);
     }
 
